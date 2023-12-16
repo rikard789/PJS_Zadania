@@ -1,0 +1,104 @@
+version: "3.1"
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: secondary greet
+  steps:
+  - intent: secondary_greet
+  - action: utter_greet  
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: secondary goodbye
+  steps:
+  - intent: secondary_goodbye
+  - action: utter_goodbye  
+
+- story: thanks
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: ask bot about his abilities
+  steps:  
+  - intent: what_you_can_do
+  - action: utter_help
+
+- story: list opening hours
+  steps:
+  - intent: list_opening_hours
+  - action: action_list_open_hours
+
+- story: open hours for day
+  steps:
+  - intent: opening_hours_day
+    entities:
+      - day_of_week: Saturday
+  - action: action_open_hours_for_day
+
+- story: open hours for day time
+  steps:
+  - intent: opening_hours_time_day
+    entities:
+      - time: 22
+      - day_of_week: Saturday
+  - action: action_open_hours_for_day_time
+
+- story: check if open now
+  steps:
+  - intent: open_now
+  - action: action_check_open_now
+
+- story: ask_menu
+  steps:
+  - intent: inform_menu
+  - action: action_list_menu
+
+- story: fast order
+  steps:
+  - intent: want_to_order
+  - action: utter_ask_order  
+
+- story: user orders food
+  steps:
+  - intent: order_food
+    entities:
+      - number: 2
+      - dish: Pizza
+  - action: action_place_order
+  - action: utter_ask_about_adds
+    
+- story: user orders only one food item
+  steps:
+  - intent: order_food_one
+    entities:
+      - dish: Pizza
+  - action: action_place_order_one_item
+  - action: utter_ask_about_adds
+
+- story: user order extras to food
+  steps:
+  - intent: inform_additional_requests
+    entities:
+      - type_of_extra_request: without
+      - extra_item: Tomatoes
+  - action: action_confirm_adds_requests
+  - action: utter_ask_about_adds
+
+- story: user cancels previous order
+  steps:
+  - intent: deny
+  - action: action_delete_cancelled_order
+  # - action: utter_order_cancelled
+
+- story: user confirm order
+  steps:
+  - intent: confirm_order
+  - action: action_confrimed_order

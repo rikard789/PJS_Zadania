@@ -1,0 +1,103 @@
+version: "3.1"
+
+
+nlu:
+- intent: list_opening_hours
+  examples: |
+    - what time does the restaurant open?
+    - when does the restaurant start serving?
+    - what are the restaurant's opening hours?
+    - what time does the restaurant close?
+    - when does the restaurant close for the day?
+    - what time can I visit the restaurant?
+    - tell me opening hours?
+    - when the restaurant is open?
+    - when restaurant is pen?
+    - when eht retstaurant is open?
+    - when eht restaurant is pen?
+    - whn  retsturant is open?
+    - opening hours?
+    - opening hours???
+    - opgening hours?
+    - openg hoous??
+    - open hours?
+    - When are you open?
+    
+- intent: opening_hours_day
+  examples: |
+    - Is the restaurant open on [Sundays](day_of_week)?
+    - What are the opening hours [today](day_of_week)?
+    - Can I visit the restaurant on [Mondays](day_of_week)?
+    - Tell me if the restaurant is open this [Thursday](day_of_week).
+
+- intent: opening_hours_time_day
+  examples: |
+    - Is the restaurant open at [18](time) on [Monday](day_of_week)?
+    - Can I visit the restaurant at [9](time) on [Sunday](day_of_week)?
+    - Restaurant is open on [Friday](day_of_week) at [22](time)?
+
+- intent: open_now
+  examples: |
+    - Is the restaurant open right now?
+    - Can I visit the restaurant at this time?
+    - Are you guys now open?
+    - Are you open for business now?
+    - I want to know if I can come by now.
+    - Are you accepting customers right now?
+    - Are you currently serving food?
+    - Can I tisiv the restaurant at thi time??
+    - Ca I visit thee restaurant at this tie?
+    - Ca I visit eht restaurant at this time?
+    - Are you guys noww ?nepo
+    - re you guys now open?
+    - Are youu guys now open?
+    - Are you open for senisub now?
+    - re youu open for business now
+    - erA you opnen for business now?
+    - Can i go now?
+    - Can i go nw?
+    - Can i go no?
+    - Cn i go now?
+    - anC i go now?
+    - Is it open now?
+    - Is it open?
+    - Is open?
+
+- regex: number
+  examples: |
+    - ^(0?[0-9]|1[0-9]|2[0-3])$
+
+- synonym: Monday
+  examples: |
+    - Monday
+    - Mon
+
+- synonym: Tuesday
+  examples: |
+    - Tuesday
+    - Tue
+
+- synonym: Wednesday
+  examples: |
+    - Wednesday
+    - Wen
+
+- synonym: Thursday
+  examples: |
+    - Thursday
+    - Thu
+
+- synonym: Friday
+  examples: |
+    - Friday
+    - Fri
+
+- synonym: Saturday
+  examples: |
+    - Saturday
+    - Sat
+
+- synonym: Sunday
+  examples: |
+    - Sunday
+    - Sun

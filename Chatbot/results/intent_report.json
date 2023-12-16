@@ -1,0 +1,105 @@
+{
+  "greet": {
+    "precision": 0.9285714285714286,
+    "recall": 1.0,
+    "f1-score": 0.962962962962963,
+    "support": 13,
+    "confused_with": {}
+  },
+  "bot_challenge": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 4,
+    "confused_with": {}
+  },
+  "order_food": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "deny": 2,
+      "mood_unhappy": 1
+    }
+  },
+  "goodbye": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 10,
+    "confused_with": {}
+  },
+  "secondary_greet": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "mood_unhappy": 1,
+      "goodbye": 1,
+      "bot_challenge": 1
+    }
+  },
+  "inform_opening_hours": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "greet": 1,
+      "goodbye": 1,
+      "deny": 1
+    }
+  },
+  "secondary_goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "goodbye": 3
+    }
+  },
+  "inform_menu": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "deny": 1,
+      "bot_challenge": 1,
+      "affirm": 1
+    }
+  },
+  "inform_additional_requests": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "mood_unhappy": 1,
+      "deny": 1,
+      "affirm": 1
+    }
+  },
+  "micro avg": {
+    "precision": 0.7714285714285715,
+    "recall": 0.6,
+    "f1-score": 0.675,
+    "support": 45
+  },
+  "macro avg": {
+    "precision": 0.25132275132275134,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.2847736625514404,
+    "support": 45
+  },
+  "weighted avg": {
+    "precision": 0.4756613756613757,
+    "recall": 0.6,
+    "f1-score": 0.5270781893004115,
+    "support": 45
+  },
+  "accuracy": 0.6
+}

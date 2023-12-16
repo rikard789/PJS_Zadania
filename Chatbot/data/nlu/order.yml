@@ -1,0 +1,126 @@
+version: "3.1"
+
+
+nlu:
+
+- intent: order_food
+  examples: |
+    - I'd like to order [2](number) [pizzas](dish).
+    - I like to order [2](number) [pizzas](dish).
+    - I would like to order [2](number) [pizzas](dish).
+    - I wold lke to ordr [2](number) [pizzas](dish).
+    - Can I get  [lasagne](dish) [3](number), please?
+    - Cn I get [3](number) [lasagne](dish), please?
+    - anC I gt [3](number) [lasagne](dish)?
+    - I'll take [1](number) [spaghetti carbonara](dish).
+    - May I order [4](number) [pizzas](dish), please?
+    - I'd like to get [2](number) [pizzas](dish).
+    - Can you bring me [3](number) [pizzas](dish)?
+    - I'll have [1](number) [pizza](dish).
+    - I'd like to order [5](number) [pizzas](dish).
+    - May I have [2](number) [shrimp tacos](dish), please?
+    - I'll take [1](number) [pizza](dish).
+    - Can I get [4](number) [pizzas](dish)?
+    - I'd like to order [3](number) [pizzas](dish).
+    - May I have [2](number) [pizzas](dish), please?
+    - I'll take [1](number) [pizza](dish).
+    - Can you bring me [4](number) [burgers](dish)?
+    - I'd like to order [3](number) [Burgers](dish).
+    - May I have [2](number) [Burgers](dish), please?
+    - I'll take [1](number) [burger].
+    - Can I get [5](number) [Burgers](dish)?
+    - I'd like to order [2](number) [Burgers](dish).
+
+- intent: order_food_one
+  examples: |
+    - I'd like to order [pizzas](dish).
+    - I like to order [pizzas](dish).
+    - I would like to order [pizzas](dish).
+    - I wold lke to ordr [pizzas](dish).
+    - Can I get  [lasagne](dish), please?
+    - Cn I get [lasagne](dish), please?
+    - anC I gt [lasagne](dish)?
+    - I'll take [spaghetti carbonara](dish).
+    - May I order [pizzas](dish), please?
+    - I'd like to get [pizzas](dish).
+    - Can you bring me [pizzas](dish)?
+    - I'll have [pizza](dish).
+    - I'd like to order [pizzas](dish).
+    - May I have [shrimp tacos](dish), please?
+    - I'll take [pizza](dish).
+    - Can I get [pizzas](dish)?
+    - I'd like to order [pizzas](dish).
+    - May I have [pizzas](dish), please?
+    - I'll take [pizza](dish).
+    - Can you bring me [burgers](dish)?
+    - I'd like to order [Burgers](dish).
+    - May I have [Burgers](dish), please?
+    - I'll take [burger].
+    - Can I get [Burgers](dish)?
+    - I'd like to order [Burgers](dish).
+
+- intent: inform_additional_requests
+  examples: |
+    - [Without](addition_type) [Tomatoes](addition)
+    - [No](addition_type) [onions](addition), please
+    - [Extra](addition_type) [Salsa](addition)
+    - Could you include [Additional](addition_type) [Bacon](addition)?
+    - I would like [With extra](addition_type) [Olives](addition).
+    - How about [Less](addition_type) the [Mushrooms](addition)?
+
+- lookup: addition_type
+  examples: | 
+    - /data/order_extras/extras.txt
+
+- lookup: addition
+  examples: | 
+    - /data/order_extras/extras_types.txt
+
+- regex: number
+  examples: |
+    - [0-9]+
+
+- synonym: Lasagne
+  examples: |
+    - Lasagne
+    - Lasa
+    - Lsgne
+    - lasagne
+    - Lasagnes
+
+- synonym: Pizza
+  examples: |
+    - Pizza
+    - pzza
+    - piza 
+    - pizzas
+
+- synonym: Hot-dog
+  examples: |
+    - Hot-dog
+    - hotdog
+    - Hotdog
+    - hodog
+    - Hot-dogs            
+
+- synonym: Burger
+  examples: |
+    - Burger
+    - Buger
+    - brger 
+    - Burgers
+
+- synonym: Spaghetti Carbonara
+  examples: |
+    - Spaghetti Carbonara
+    - Carbonara
+    - Spagetti Carbonara 
+    - spageti cabonara
+    - Spaghettis Carbonaras
+
+- synonym: Tiramisu
+  examples: |
+    - Tiramisu
+    - tirmisu
+    - tramisu 
+    - Tiramisus

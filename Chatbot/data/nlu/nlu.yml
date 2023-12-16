@@ -1,0 +1,146 @@
+version: "3.1"
+
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: secondary_greet
+  examples: |
+    - How are you?
+    - What's up?
+    - Good day
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: secondary_goodbye
+  examples: |
+    - Have a great day
+    - Bye for now
+    - See you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yeah
+    - correct
+    - of course
+    - that sounds good
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - n
+    - don't like that
+    - not really
+    - no way
+
+- intent: what_you_can_do
+  examples: |
+    - What you can do?
+    - How can you help me?
+    - What can you do for me?
+    - Can you assist me with something?
+    - What help can I get from you?
+    - How are you useful to me?
+    - What are your abilities to assist me?
+    - Can you do anything for me?
+    - How can you support me?
+    - What kind of support do you offer?
+    - Do you have any services for me?
+    - What you can do?
+    - What ou can do?
+    - What you can ?od
+    - hat can you do forr me?
+    - What can you do for me?
+    - hat can yo do for me?
+    - Wht are ou capabiltes?
+    - What are your capabilities?
+    - Wat are your capabilties?
+    - What are you capable offf?
+    - What are you capabl of?
+    - hwat are you capable of?
+    - What are you capabale of?
+    - Can you do som stuff?
+    - Can you doo some stuf?
+    - Can you do some stuf?
+    - Cn you do sme stuf?
+    - What features do you got?
+    - Wht features do you get?
+    - Wht featuress doo you gott?
+    - wha featres do you got?
+    - Provide a list of your features?
+    - Provide a lists of yourr featuress?
+    - Prvide list of our featuress?
+    - What tasks are you good at?
+    - What tass are you god at?
+
+- intent: want_to_order
+  examples: |
+    - Can I order something?
+    - I want to get something from restaurant.
+    - How can I buy from you?
+    - Can I order something?
+    - I want to place an order.
+    - I'd like to make a purchase.
+    - I want to get something from restaurant.
+    - I want to gett something frmo re.staurant.
+    - Can I orde something
+    - Can you help me order?
+    - an youu help me order?
+    - Can you hel me order?
+    - please assist me in placing an order.
+    - Pleease assist me in placing an rder.
+    - Pleasee sasits me in placing an order.
+    - i want to order.
+
+- intent: confirm_order
+  examples: |
+    - c
+    - confirm
+
+- intent: thank_you
+  examples: |
+    - Thanks a lot!
+    - Thank you very much!
+    - I appreciate your help!
+    - Thank you so much for your assistance!
+    - Thanks for that!
+    - I'm grateful for your support!
+    - I want to express my thanks!
+    - Many thanks for your help!
+    - Thank you
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

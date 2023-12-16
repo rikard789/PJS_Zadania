@@ -1,0 +1,40 @@
+version: "3.1"
+
+nlu:
+- intent: inform_menu
+  examples: |
+    - What is on the menu?
+    - Wht is on the menu?
+    - What is on the mnu?
+    - hWat is on the menu?
+    - Can you tell me about your menu?
+    - Can you tel me about your menu?
+    - anC you tell me about your menu?
+    - Can you tell me about your menu??
+    - What dishes do you offer?
+    - Wat dishs do you offer?
+    - What dishes do you ofer?
+    - What food options do you have?
+    - What fod options do you have?
+    - What items are available to order?
+    - What items are avilable to order?
+    - Wht itms are available to order?
+    - What are the choices on your menu?
+    - What are the chices on your menu?
+    - What are the choices on yor menu?
+    - Can you list the menu items?
+    - Can you list menu items?
+    - Cn you list the menu items?
+    - What kind of dishes do you serve?
+    - What is included in your menu?
+    - Tell me about the available food options.
+    - What are the menu selections?
+    - What do you have on your menu?
+    - Can you provide details about the dishes?
+    - What are the available food choices?
+    - Can you describe the menu items?
+    - Tell me about your culinary offerings.
+    - What kinds of meals are on the menu?
+    - What is there to eat on your menu?
+    - What types of dishes can I order?
+    - Give me information about your menu items.

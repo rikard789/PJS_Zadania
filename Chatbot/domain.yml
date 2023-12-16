@@ -1,0 +1,139 @@
+version: "3.1"
+
+intents:
+  - greet
+  - secondary_greet
+  - goodbye
+  - secondary_goodbye
+  - bot_challenge
+  - thank_you
+  - affirm
+  - deny
+  - what_you_can_do
+  - list_opening_hours
+  - opening_hours_day
+  - opening_hours_time_day
+  - open_now
+  - inform_menu
+  - want_to_order
+  - order_food
+  - order_food_one
+  - inform_additional_requests
+  - confirm_order
+
+entities:
+  - day_of_week
+  - time
+  - number
+  - dish
+  - addition
+  - addition_type
+  - address
+
+slots:
+  day_of_week:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: day_of_week
+  time:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: time
+  number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number
+  dish:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: dish
+  addition:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: addition      
+  addition_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: addition_type
+  orders:
+    type: text
+    mappings:
+      - type: custom
+  extras_notes:
+    type: text
+    mappings:
+      - type: custom    
+
+actions:
+  - action_check_open_now
+  - action_list_open_hours
+  - action_open_hours_for_day
+  - action_open_hours_for_day_time
+  - action_open_hours_now
+  - action_list_menu
+  - action_place_order
+  - action_place_order_one_item
+  - action_confirm_adds_requests
+  - action_confrimed_order
+  - action_delete_cancelled_order
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you today?"
+  - text: "Hey! How can I help you with order?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_thank_you:
+  - text: "No problem"
+  - text: "You're welcome my friend."
+  - text: "I am happy I could help."
+  - text: "You are welcome"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_help:
+  - text: | 
+      I can answer on questions about:
+        - opening / closing hours 
+        - restaurant menu
+        - ordering food
+        - adding extras to your food
+
+  utter_ask_order:
+  - text: "Please enter your request"
+
+  utter_ask_about_adds:
+  - text: |
+      Do you have any preferences for additional items with your meal?
+       If not, type 'c' to confirm the order.
+
+  - text: |
+      Are there any special requests or modifications you'd like to make to your order?
+       If not, type 'c' to confirm the order.
+  
+utter_order_canceled:
+- text: "Thank you for letting us know. Your order has been successfully canceled."
+- text: "We've processed your cancellation request. Your order is now canceled."
+- text: "We've received your cancellation request, and your order has been canceled as per your instructions."
+
+  # utter_order_confirmation:
+  #   - text: "Sure, your order has been placed. It will be ready shortly."
+
+  # utter_additional_requests_confirmation:
+  #   - text: "Got it, we'll make sure to prepare your dish according to your preferences."
+
+  # utter_sorry_unrecognized_intent:
+  #   - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
