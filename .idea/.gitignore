@@ -1,3 +1,10 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+.venv/
+Chatbot/.rasa
+Chatbot/cache
+Chatbot/results
+Chatbot/requirements.txt
+Chtbot/orders.json
+Chtbot/__pycache__
