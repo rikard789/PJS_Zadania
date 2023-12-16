@@ -1,7 +1,7 @@
 import discord
 import requests
 
-DISCOR_BOT_TOKEN = 'MTE4MjQxOTI1ODkyMDE2MTQyNA.GDVL-d.3F-oDwva_aHJsODeM5i8op5hYrpAaHW_W5AQTE'
+DISCOR_BOT_TOKEN = ''
 RASA_INTERPRETER_URL = "http://localhost:5005/webhooks/rest/webhook"
 
 
