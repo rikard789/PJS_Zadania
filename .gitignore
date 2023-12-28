@@ -1,0 +1,11 @@
+.idea
+.venv
+Chatbot/__pycache__
+Chatbot/rasa
+Chatbot/actions/__pycache__
+Chatbot/cache
+Chatbot/results
+Chatbot/requirements.txt
+Chatbot/orders.json
+JS_Shop/backend/node_modules
+JS_Shop/frontend/node_modules
