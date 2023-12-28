@@ -1,1 +1,2 @@
-# Projects for Jagiellonian University subject: Scripting Languages Programming
+# Projects for Jagiellonian University subject: 
+## Scripting Languages Programming
