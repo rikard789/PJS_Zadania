@@ -27,36 +27,24 @@ const ProductSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product', ProductSchema);
 
-createProducts()
-async function createProducts() {
-    const weapon1 = Product.create({
-        name: 'HUNT GROUP DESTROYER VM15',
-        price: 2500,
-        category: 'Hunting weapon'
-    })
-    const weapon2 = Product.create({
-        name: 'CZ 457 Varmint Synthetic 22LR',
-        price: 2750,
-        category: 'Hunting weapon'
-    })
-    const weapon3 = Product.create({
-        name: 'Rewolwer Pietta 1851 Colt Navy Yank Steel .44',
-        price: 1600,
-        category: 'Black powder weapon'
-    })
-    const weapon4 = Product.create({
-        name: 'CZ SCORPION EVO 3 A1',
-        price: 7900,
-        category: 'Machine gun'
-    })
-    const weapon5 = Product.create({
-        name: 'STEN MK II',
-        price: 2500,
-        category: 'Machine gun'
-    })
-    console.log(weapon1)
-}
-
+const createProduct = async (name, price, category) => {
+    try {
+        const product = await Product.create({ name, price, category });
+        console.log('Product created:', product);
+    } catch (error) {
+        if (error.code === 11000 && error.keyPattern && error.keyPattern.name) {
+            console.log('Product with the same name already exists.');
+        } else {
+            console.error('Error creating product:', error.message);
+        }
+    }
+};
+//populating database with products
+createProduct('HUNT GROUP DESTROYER VM15', 2500, 'Hunting weapon');
+createProduct('CZ 457 Varmint Synthetic 22LR', 2750, 'Hunting weapon');
+createProduct('Rewolwer Pietta 1851 Colt Navy Yank Steel .44', 1600, 'Black powder weapon');
+createProduct('CZ SCORPION EVO 3 A1', 7900, 'Machine gun');
+createProduct('STEN MK II', 2500, 'Machine gun');
 
 app.get('/api/products', async (req, res) => {
     const products = await Product.find();
